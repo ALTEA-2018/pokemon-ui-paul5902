@@ -1,5 +1,6 @@
 package com.miage.altea.tp.pokemon_ui.pokemonTypes.service;
 
+import com.miage.altea.tp.pokemon_ui.service.PokemonTypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

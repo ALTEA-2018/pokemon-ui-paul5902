@@ -1,6 +1,7 @@
 package com.miage.altea.tp.pokemon_ui.pokemonTypes.service;
 
-import com.miage.altea.tp.pokemon_ui.pokemonTypes.bo.PokemonType;
+import com.miage.altea.tp.pokemon_ui.bo.PokemonType;
+import com.miage.altea.tp.pokemon_ui.service.PokemonTypeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -55,6 +56,4 @@ class PokemonTypeServiceImplTest {
         assertEquals("${pokemonType.service.url}", valueAnnotation.value());
     }
 
-
 }
-

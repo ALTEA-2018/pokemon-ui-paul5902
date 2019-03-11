@@ -1,7 +1,6 @@
 package com.miage.altea.tp.pokemon_ui.controller;
-
-import com.miage.altea.tp.pokemon_ui.pokemonTypes.bo.PokemonType;
-import com.miage.altea.tp.pokemon_ui.pokemonTypes.service.PokemonTypeService;
+import com.miage.altea.tp.pokemon_ui.bo.PokemonType;
+import com.miage.altea.tp.pokemon_ui.service.PokemonTypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class PokemonTypeControllerTest {
+
     @Test
     void controllerShouldBeAnnotated(){
         assertNotNull(PokemonTypeController.class.getAnnotation(Controller.class));
@@ -41,6 +41,5 @@ class PokemonTypeControllerTest {
         assertNotNull(getMapping);
         assertArrayEquals(new String[]{"/pokedex"}, getMapping.value());
     }
-
 
 }

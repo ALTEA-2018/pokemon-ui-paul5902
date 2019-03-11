@@ -3,10 +3,10 @@
 <body>
 
 <div class="container">
-    <h1 class="pt-md-5 pb-md-5">Pokedex</h1>
+    <h1 class="pt-md-5 pb-md-5">{{trainer.name}}</h1>
 
     <div class="card-deck">
-        {{#pokemonTypes}}
+        {{#trainer.teamPokemon}}
         <div class="col-md-3">
             <div class="card shadow-sm mb-3">
                 <div class="card-header">
@@ -16,6 +16,7 @@
                 <img class="card-img-bottom" src="{{sprites.back_default}}" alt="Pokemon"/>
 
                 <div class="card-body">
+                    <p>Level : {{level}}</p>
                     <p>Types : </p>
                     {{#types}}
                     <span class="badge badge-warning">{{ . }}</span>
@@ -28,7 +29,7 @@
                 </div>
             </div>
         </div>
-        {{/pokemonTypes}}
+        {{/trainer.teamPokemon}}
     </div>
 
 </div>
