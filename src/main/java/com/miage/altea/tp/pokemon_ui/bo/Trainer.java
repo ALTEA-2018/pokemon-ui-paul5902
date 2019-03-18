@@ -15,6 +15,8 @@ public class Trainer {
 
     private String urlIcon;
 
+    private String password;
+
     public Trainer() {}
 
     public Trainer(String name) {
@@ -49,5 +51,13 @@ public class Trainer {
 
     public void setTeamPokemon(List<PokemonType> teamPokemon) {
         this.teamPokemon = teamPokemon;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

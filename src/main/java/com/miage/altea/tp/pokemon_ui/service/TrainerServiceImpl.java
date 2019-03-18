@@ -65,5 +65,14 @@ public class TrainerServiceImpl implements TrainerService{
         trainer.setTeamPokemon(pokemonTypes);
     }
 
+    @Override
+    @Cacheable("trainers")
+    @Retryable
+    public Trainer getTrainer(String name) {
+        Trainer trainer = this.restTemplate.getForObject(this.trainerServiceUrl+"/trainers/"+name,Trainer.class);
+        foundPokemonTypeForTrainer(trainer);
+        return trainer;
+    }
+
 
 }

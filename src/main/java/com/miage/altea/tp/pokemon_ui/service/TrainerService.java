@@ -10,4 +10,6 @@ public interface TrainerService {
 
     Trainer getTeamForTrainer(String name);
 
+    Trainer getTrainer(String name);
+
 }

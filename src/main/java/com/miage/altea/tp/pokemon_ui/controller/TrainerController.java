@@ -2,6 +2,7 @@ package com.miage.altea.tp.pokemon_ui.controller;
 
 import com.miage.altea.tp.pokemon_ui.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,6 +24,13 @@ public class TrainerController {
     public ModelAndView trainers(String trainerName){
         ModelAndView modelAndView = new ModelAndView("team");
         modelAndView.addObject("trainer",trainerService.getTeamForTrainer(trainerName));
+        return modelAndView;
+    }
+
+    @GetMapping("/profile")
+    public ModelAndView profile(){
+        ModelAndView modelAndView = new ModelAndView("profile");
+        modelAndView.addObject("profile", SecurityContextHolder.getContext().getAuthentication());
         return modelAndView;
     }
 
