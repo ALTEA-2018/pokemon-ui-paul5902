@@ -2,6 +2,7 @@ package com.miage.altea.tp.pokemon_ui.service;
 
 import com.miage.altea.tp.pokemon_ui.bo.PokemonType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -34,6 +35,7 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
     }
 
     @Autowired
+    @Qualifier("pokemonTypeRestTemplate")
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }

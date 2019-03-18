@@ -8,7 +8,6 @@ public class Trainer {
 
     private String name;
 
-    @JsonProperty("pokemons")
     private List<Pokemon> team;
 
     private List<PokemonType> teamPokemon;
