@@ -30,7 +30,7 @@ public class TrainerController {
     @GetMapping("/profile")
     public ModelAndView profile(){
         ModelAndView modelAndView = new ModelAndView("profile");
-        modelAndView.addObject("profile", SecurityContextHolder.getContext().getAuthentication());
+        modelAndView.addObject("profile", trainerService.getTeamForTrainer(SecurityContextHolder.getContext().getAuthentication().getName()));
         return modelAndView;
     }
 
